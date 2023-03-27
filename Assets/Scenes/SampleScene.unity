@@ -797,6 +797,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingrName: Eggs
+  thisIngr:
+    active: 0
+    name: Eggs
+    count: 0
 --- !u!114 &344869878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,6 +1431,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeIngredients: []
+  fridgeIngredients:
+  - active: 0
+    name: Eggs
+    count: 1
 --- !u!4 &638051475
 Transform:
   m_ObjectHideFlags: 0
@@ -2110,7 +2118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookingMenu: {fileID: 2116284072}
-  fridgeMenu: {fileID: 0}
+  fridgeMenu: {fileID: 1588476463}
+  eggsText: {fileID: 250566937}
 --- !u!4 &1363283242
 Transform:
   m_ObjectHideFlags: 0
@@ -2156,6 +2165,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1556664102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556664104}
+  - component: {fileID: 1556664103}
+  m_Layer: 0
+  m_Name: Database
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1556664103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556664102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07df3d53e0036343af922ee757396b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allIngredients:
+  - active: 0
+    name: Eggs
+    count: 0
+  allRecipes: []
+  allTools: []
+  allSceneIngredients:
+  - {fileID: 344869876}
+--- !u!4 &1556664104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556664102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1068.5, y: 256.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1575593895
 GameObject:
@@ -2307,7 +2368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1588476464
 RectTransform:
   m_ObjectHideFlags: 0

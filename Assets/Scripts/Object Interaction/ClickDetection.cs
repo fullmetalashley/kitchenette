@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 
 public class ClickDetection : MonoBehaviour, IPointerDownHandler
 {
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -24,5 +23,16 @@ public class ClickDetection : MonoBehaviour, IPointerDownHandler
         Debug.Log("Clicked!" + this.gameObject.name);
         //Use this for opening rooms. Move to a new area
 
+        //If this object has an ingr attached, we can open the cooking menu. 
+        //Otherwise, we should open one of the storage menus. For now, stick with fridge.
+        if (this.gameObject.GetComponent<Ingredient>())
+        {
+            //If we have one, open cooking.
+            FindObjectOfType<UIManager>().ToggleCookingMenu();
+        }
+        else
+        {
+            FindObjectOfType<UIManager>().ToggleFridgeMenu();
+        }
     }
 }

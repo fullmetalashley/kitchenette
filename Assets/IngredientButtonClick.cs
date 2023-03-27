@@ -17,8 +17,10 @@ public class IngredientButtonClick : MonoBehaviour
         
     }
 
+    //Called when we click the button
     public void ActivateIngredient()
     {
         FindObjectOfType<CookingManager>().ActivateIngredient(ingrName);
+
     }
 }
